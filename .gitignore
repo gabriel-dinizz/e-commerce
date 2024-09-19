@@ -1,10 +1,10 @@
 # macOS
 .DS_Store
 
-# Node.js
+# Node.js dependencies
 node_modules/
 
-# VS Code
+# VSCode configuration
 .vscode/
 
 # User-specific files
@@ -14,3 +14,9 @@ node_modules/
 .gitconfig
 .viminfo
 
+# System files
+.history
+.Trash-*
+
+# Log files
+*.log
