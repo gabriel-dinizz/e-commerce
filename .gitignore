@@ -1,1 +1,16 @@
+# macOS
+.DS_Store
+
+# Node.js
 node_modules/
+
+# VS Code
+.vscode/
+
+# User-specific files
+.bash_profile
+.bashrc
+.zshrc
+.gitconfig
+.viminfo
+
