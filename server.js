@@ -9,6 +9,8 @@ const shopRoutes = require("./routes/shop");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
+app.use(express.static(path.join(__dirname, "public")));
+
 // Use '/admin' as the base path for admin-related routes
 app.use("/admin", adminRoutes);
 
