@@ -15,7 +15,7 @@ router.post("/add-product", (req, res, next) => {
 
 // Route for serving the add-product page
 router.get("/add-product", (req, res, next) => {
-  res.sendFile(path.join(rootDir, "views", "add-product.html"));
+  res.render("add-product", { pageTitle: "Add Product" });
 });
 
 // Export both the routes and the products array

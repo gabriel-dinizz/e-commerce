@@ -20,10 +20,9 @@ app.use("/admin", adminData.routes);
 // Use '/' as the base path for shop-related routes
 app.use(shopRoutes);
 
+// Handle 404 errors
 app.use((req, res, next) => {
-  res
-    .status(404)
-    .sendFile(path.join(__dirname, "views", "page-not-found.html"));
+  res.status(404).render("page-not-found", { pageTitle: "Page Not Found" });
 });
 
 app.listen(3000, () => {
