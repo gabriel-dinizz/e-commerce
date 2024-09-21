@@ -4,8 +4,10 @@ const path = require("path");
 
 const app = express();
 
-const adminRoutes = require("./routes/admin");
+app.set("view engine", "pug");
+app.set("views", "views");
 
+const adminData = require("./routes/admin"); // Import adminData (both routes and products)
 const shopRoutes = require("./routes/shop");
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Use '/admin' as the base path for admin-related routes
-app.use("/admin", adminRoutes);
+app.use("/admin", adminData.routes);
 
 // Use '/' as the base path for shop-related routes
 app.use(shopRoutes);
