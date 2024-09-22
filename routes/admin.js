@@ -15,7 +15,10 @@ router.post("/add-product", (req, res, next) => {
 
 // Route for serving the add-product page
 router.get("/add-product", (req, res, next) => {
-  res.render("add-product", { pageTitle: "Add Product" });
+  res.render("add-product", {
+    pageTitle: "Add Product",
+    path: "/admin/add-product",
+  });
 });
 
 // Export both the routes and the products array
