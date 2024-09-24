@@ -1,4 +1,8 @@
-extends /layout/main-layout.pug
+<%- include('includes/head.ejs') %>
+</head>
 
-block content
-  h1 Page Not Found!
+<body>
+    <%- include('includes/navigation.ejs') %>
+    <h1>Page Not Found!</h1>
+
+<%- include('includes/end.ejs') %>
