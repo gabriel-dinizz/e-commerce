@@ -6,7 +6,7 @@ const app = express();
 
 // Set the view engine to Pug
 app.set("view engine", "ejs");
-app.set("views", views);
+app.set("views", "views");
 
 // Set the views directory
 app.set("views", path.join(__dirname, "views"));
