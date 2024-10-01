@@ -25,7 +25,7 @@ main {
 .main-header__nav {
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: center; /* Already set, ensures vertical centering */
 }
 
 .main-header__item-list {
@@ -33,13 +33,15 @@ main {
   margin: 0;
   padding: 0;
   display: flex;
+  align-items: center; /* Add this to center items vertically */
 }
 
 .main-header__item {
   margin: 0 1rem;
   padding: 0;
+  display: flex;
+  align-items: center; /* Ensures the link is vertically centered */
 }
-
 .main-header__item a {
   text-decoration: none;
   color: white;
