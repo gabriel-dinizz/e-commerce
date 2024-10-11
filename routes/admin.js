@@ -4,7 +4,7 @@ const router = express.Router();
 const products = []; // This array will store products
 
 // /admin/add-product => GET
-router.get('/add-product', (req, res, next) => {
+router.get('/add-product', (_req, res, next) => {
   res.render('add-product', {
     pageTitle: 'Add Product',
     path: '/admin/add-product',
