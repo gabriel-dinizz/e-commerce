@@ -1,11 +1,18 @@
-const path = require("path");
-
-const express = require("express");
-
-const productsController = require("../controllers/products");
+const express = require('express');
+const adminData = require('./admin'); // Importing products array from admin.js
 
 const router = express.Router();
 
-router.get("/", productsController.getProducts);
+router.get('/', (req, res, next) => {
+  const products = adminData.products; // Accessing the products array
+  res.render('shop', {
+    prods: products,
+    pageTitle: 'Shop',
+    path: '/',
+    hasProducts: products.length > 0,
+    activeShop: true,
+    productCSS: true
+  });
+});
 
 module.exports = router;
